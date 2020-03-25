@@ -25,7 +25,7 @@ bot.on('message', msg=>{
         case 'm':
             if(args.length >= 3){
                 var i;
-                for(i in bot.channels){
+                for(i in bot.channels[1]){
                     msg.channel.send(i);
                 }
             }
