@@ -21,6 +21,11 @@ bot.on('message', msg=>{
                 msg.react(args[1]);
             }
             break;
+        case 'm':
+            if(args.length >= 3){
+                var ch = args[1]
+                ch.send(args[2]);
+            }
     }
 })
 
