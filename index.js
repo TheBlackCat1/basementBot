@@ -24,8 +24,9 @@ bot.on('message', msg=>{
             break;
         case 'm':
             if(args.length >= 3){
-                var chan = bot.channels.cache.find(ch => ch.name === "general");
-                chan.send(chan.id);
+                var chan = bot.channels.cache.find(ch => ch.name === 'general');
+                var chanid = chan.id;
+                console.log(chanid);
             }
             break;
     }
