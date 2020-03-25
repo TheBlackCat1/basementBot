@@ -25,8 +25,7 @@ bot.on('message', msg=>{
         case 'm':
             if(args.length >= 3){
                 var chan = bot.channels.cache.find(ch => ch.name === 'general');
-                var chanid = chan.id;
-                console.log(chanid);
+                chan.send("HELLO");
             }
             break;
     }
