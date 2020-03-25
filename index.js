@@ -24,7 +24,7 @@ bot.on('message', msg=>{
             break;
         case 'm':
             if(args.length >= 3){
-                const chan = bot.channels.cache.find(ch => ch.name === 'general');
+                const chan = bot.guild.channels.cache.find(ch => ch.name === 'general');
                 chan.send("HELLO");
             }
             break;
