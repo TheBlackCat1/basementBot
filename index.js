@@ -16,6 +16,11 @@ bot.on('message', msg=>{
         case 'ping':
             msg.channel.send('pong');
             break;
+        case 'rr':
+            if(args.length() >= 2){
+                msg.react(':thumbsup:');
+            }
+            break;
     }
 })
 
