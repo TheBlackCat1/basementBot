@@ -19,7 +19,7 @@ bot.on('message', msg=>{
         case 'rr':
             if(args.length >= 2){
                 console.log('i am reacting');
-                msg.react(':thumbsup:');
+                msg.react('🤔');
             }
             break;
     }
