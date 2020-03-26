@@ -8,7 +8,7 @@ const PREFIX = '!!'
 bot.on('ready', () =>{
     console.log('This bot is online!');
     console.log(bot.channels);
-    bot.user.setActivity('OASIS', {type: 'PLAYING'})
+    bot.user.setActivity('OASIS', {type: 'PLAYING'});
 })
 
 bot.on('message', msg=>{
