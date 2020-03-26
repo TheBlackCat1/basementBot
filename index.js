@@ -8,6 +8,7 @@ const PREFIX = '!!'
 bot.on('ready', () =>{
     console.log('This bot is online!');
     console.log(bot.channels);
+    bot.user.setActivity('OASIS', {type: 'PLAYING'})
 })
 
 bot.on('message', msg=>{
@@ -22,13 +23,6 @@ bot.on('message', msg=>{
                 msg.react(args[1]);
             }
             break;
-        case 'm':
-            if(args.length >= 3){
-                const chan = msg.channel.guild.channels.cache.find(ch => ch.name === 'general');
-                chan.send("HELLO");
-            }
-            break;
-    }
 })
 
 bot.login(token);
