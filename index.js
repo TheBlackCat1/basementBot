@@ -29,7 +29,7 @@ bot.on('message', msg=>{
             if(args.length >= 3){
                 //do stuff
                 for(i in bot.channels.cache){
-                    console.log(bot.channels.fetch(args[1]));
+                    console.log(bot.channels.cache)
                 }
                 msg.delete();
             }
