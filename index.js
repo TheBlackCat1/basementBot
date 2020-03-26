@@ -21,6 +21,7 @@ bot.on('message', msg=>{
         case 'rr':
             if(args.length >= 2){
                 msg.react(args[1]);
+                console.log(msg.reactions.cache);
             }
             break;
     }
