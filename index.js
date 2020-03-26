@@ -28,9 +28,7 @@ bot.on('message', msg=>{
             //!!gm channelID messageID
             if(args.length >= 3){
                 //do stuff
-                for(i in bot.channels.cache){
-                    console.log(bot.channels.cache)
-                }
+                console.log(bot.channels.cache);
                 msg.delete();
             }
     }
