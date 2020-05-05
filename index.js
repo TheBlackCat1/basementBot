@@ -5,6 +5,9 @@ const token = process.env.token;
 
 const PREFIX = '!!'
 
+var reactionMessages = [];
+
+
 bot.on('ready', () =>{
     console.log('This bot is online!');
     //console.log(bot.channels);
@@ -19,26 +22,18 @@ bot.on('message', msg=>{
             msg.channel.send('pong');
             break;
         case 'rr':
-            if(args.length >= 2){
-                msg.react(args[1]);
-                console.log(msg.reactions.cache.get());
+            if(args.length == 3){
+                var message = [args[1], args[2]];
+                reactionMessages.push(message);
+                console.log(message);
             }
+            console.log(reactionMessages);
             break;
-        case 'gm':
-            //!!gm channelID messageID
-            if(args.length >= 3){
-                //do stuff
-                console.log(bot.channels.cache);
-                msg.delete();
-            }
     }
 })
 
 bot.on('messageReactionAdd', gae=>{
     console.log('gruh');
-    if(gae.message.id === '704792711789543607'){
-        console.log('bruh');
-    }
 })
 
 bot.login(token);
