@@ -35,6 +35,7 @@ bot.on('message', msg=>{
 })
 
 bot.on('messageReactionAdd', gae=>{
+    console.log('gruh');
     if(gae.message.id === '704792711789543607'){
         console.log('bruh');
     }
